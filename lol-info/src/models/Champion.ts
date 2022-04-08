@@ -11,6 +11,8 @@ export class Champion {
     lore: string = '';
     image: imageChampion = new imageChampion(null);
     skins: Skin[] = [];
+    allyTips: string[] = [];
+    enemyTips: string[] = [];
 
     constructor(data: any = null) {
         if (data != null) {
@@ -23,6 +25,8 @@ export class Champion {
             this.image = new imageChampion(data.image);
             this.lore = data.lore;
             this.skins = data.skins?.map((skin: any) => new Skin(skin));
+            this.allyTips = data.allytips;
+            this.enemyTips = data.enemytips;
         }        
     }
 

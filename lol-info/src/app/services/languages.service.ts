@@ -8,8 +8,6 @@ import { Language } from 'src/models/language';
 })
 export class LanguagesService {
 
-  subject$ = new Subject<string>();
-
   itemsSubject$ = new Subject<Language[]>();
 
   items: Language[] = [];
@@ -19,16 +17,12 @@ export class LanguagesService {
   mapper = new Map<string, string>();
   defaultLanguage: any = 'en_US';
   get currentLanguage(): string {
-    return this.defaultLanguage;
+    const language = sessionStorage.getItem('language') ?? this.defaultLanguage;
+    return language;
   }
 
   set currentLanguage(language: string) {
     this.defaultLanguage = language;
-    this.subject$.next(this.defaultLanguage);
-  }
-
-  get subject(): Observable<string> {
-    return this.subject$.asObservable();
   }
 
   get itemsSubject(): Observable<Language[]> {

@@ -16,9 +16,6 @@ export class ChampionsListComponent implements OnInit {
     this.championService.subject.subscribe(data => {
       this.champions = data;
     });
-    this.languageService.subject.subscribe(data => {
-      this.championService.getData();
-    });
    }
 
   ngOnInit(): void {

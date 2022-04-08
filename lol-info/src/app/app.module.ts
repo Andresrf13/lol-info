@@ -17,6 +17,7 @@ import { ChampionInformationComponent } from './champion-information/champion-in
 import { MatTabsModule } from '@angular/material/tabs';
 import { LoreComponent } from './lore/lore.component';
 import { SkinsComponent } from './skins/skins.component';
+import { TipsComponent } from './tips/tips.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SkinsComponent } from './skins/skins.component';
     ChampionsListComponent,
     ChampionInformationComponent,
     LoreComponent,
-    SkinsComponent
+    SkinsComponent,
+    TipsComponent
   ],
   imports: [
     BrowserModule,

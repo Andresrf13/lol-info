@@ -28,6 +28,8 @@ export class LanguagesComponent implements  OnInit {
 
   selectionChanged(event: any) {
     this.languagesService.currentLanguage = this.selected;
+    sessionStorage.setItem('language', this.selected);
+    window.location.reload();
   }
 
 }

@@ -24,7 +24,7 @@ export class SkinsComponent implements OnInit {
   skins: Skin[] = [];
 
   getURl(num: number): string {
-    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this._champion.name}_${num}.jpg`;
+    return `https://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this._champion.id}_${num}.jpg`;
   }
 
 }
