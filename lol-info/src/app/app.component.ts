@@ -10,21 +10,6 @@ import { LanguagesService } from './services/languages.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements  AfterContentChecked {
+export class AppComponent {
   title = words.AppName;
-
-  champions: Champion[] = [];
-
-  constructor(private championService: ChampionService, private languageService: LanguagesService) {
-    this.championService.subject.subscribe(data => {
-      this.champions = data;
-    });
-    this.languageService.subject.subscribe(data => {
-      this.championService.getData();
-    });
-  }
-
-
-  ngAfterContentChecked() { 
-  }
 }

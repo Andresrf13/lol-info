@@ -3,7 +3,5 @@
     <app-navbar class="nav"></app-navbar>
 </header>
 <article>
-    <div class="display">
-        <app-champion-card *ngFor="let item of champions" [champion]="item" ></app-champion-card>
-    </div>
+        <router-outlet></router-outlet>
 </article>

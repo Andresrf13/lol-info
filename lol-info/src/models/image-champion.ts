@@ -1,19 +1,21 @@
 export class imageChampion {
-    full: string;
-    sprite: string;
-    group: string;
-    x: number;
-    y: number;
-    w: number;
-    h: number;
+    full: string = '';
+    sprite: string = '';
+    group: string = '';
+    x: number= -1;
+    y: number = -1;
+    w: number = -1;
+    h: number = -1;
 
-    constructor(full: string, sprite: string, group: string, x: number, y: number, w: number, h: number) {
-        this.full = full;
-        this.sprite = sprite;
-        this.group = group;
-        this.x = x;
-        this.y = y;
-        this.w = w;
-        this.h = h;
+    constructor(data: any) {
+        if (data != null) {
+            this.full = data.full;
+            this.sprite = data.sprite;
+            this.group = data.group;
+            this.x = data.x;
+            this.y = data.y;
+            this.w = data.w;
+            this.h = data.h;
+        }
     }
 }

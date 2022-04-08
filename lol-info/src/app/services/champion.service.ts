@@ -42,8 +42,7 @@ export class ChampionService {
     for (const i in data.data) {
       let item;
       const champ = data.data[i];
-      let image = new imageChampion(champ.image.full, champ.image.sprite, champ.image.group, champ.image.x, champ.image.y, champ.image.w, champ.image.h);
-      item = new Champion(champ.version, champ.id, champ.key, champ.name, champ.title, champ.blurb, image);
+      item = new Champion(champ);
       this.championsMap.set(champ.key, item);
     }
   }

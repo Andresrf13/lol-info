@@ -12,13 +12,22 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { ChampionCardComponent } from './champion-card/champion-card.component';
 import { MatCardModule } from '@angular/material/card';
+import { ChampionsListComponent } from './champions-list/champions-list.component';
+import { ChampionInformationComponent } from './champion-information/champion-information.component';
+import { MatTabsModule } from '@angular/material/tabs';
+import { LoreComponent } from './lore/lore.component';
+import { SkinsComponent } from './skins/skins.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     LanguagesComponent,
-    ChampionCardComponent
+    ChampionCardComponent,
+    ChampionsListComponent,
+    ChampionInformationComponent,
+    LoreComponent,
+    SkinsComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +37,8 @@ import { MatCardModule } from '@angular/material/card';
     MatMenuModule,
     MatSelectModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatTabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

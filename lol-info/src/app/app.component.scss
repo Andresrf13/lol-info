@@ -34,17 +34,7 @@ header {
     }
 }
 
-.display {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: space-between;
-    gap: .5rem;
+article {
+    background-image: var(--background);
 }
 
-app-champion-card {
-    width: 300px;
-    min-height: 400px;
-}
