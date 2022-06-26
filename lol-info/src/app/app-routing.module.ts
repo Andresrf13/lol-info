@@ -5,8 +5,7 @@ import { ChampionInformationComponent } from './champion-information/champion-in
 import { ChampionsListComponent } from './champions-list/champions-list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'home', component: ChampionsListComponent },
+  { path: '', component: ChampionsListComponent },
   { path: 'champion/:id', component: ChampionInformationComponent },
 ];
 
