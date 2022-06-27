@@ -50,4 +50,8 @@ export class ChampionService {
   get data() {
     return Array.from(this.championsMap.values()); 
   }
+
+  search(text: string): Champion[] {
+  return this.data.filter( (champion: Champion) => champion.name.toLowerCase().includes(text.toLowerCase()));
+  }
 }

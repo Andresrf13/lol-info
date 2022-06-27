@@ -1,3 +1,6 @@
+<div class="search_area">
+    <input matInput class="input_box input_text" #searchInput type="text" (input)="doSearch(searchInput.value)" onfocus="this.placeholder=''" onblur="this.placeholder='Search for a champion'" placeholder="Search for a champion">
+</div>
 <div class="display">
     <app-champion-card *ngFor="let item of champions" [champion]="item"></app-champion-card>
 </div>

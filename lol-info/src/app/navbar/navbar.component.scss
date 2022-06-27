@@ -1,6 +1,18 @@
+@use '../../styling/variables';
+
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: end;
     width: 100%;
+
+    app-languages {
+        margin-right: 1rem;
+    }
+}
+
+::ng-deep {
+    mat-select {
+        background-color: variables.$main-color;
+    }
 }

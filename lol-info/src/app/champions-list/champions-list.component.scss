@@ -1,7 +1,10 @@
+@use '../../styling/variables';
+@use '../../styling/input';
+@use '../../styling/select';
 
 app-champion-card {
     width: 300px;
-    min-height: 400px;
+    height: 600px;
 }
 
 .display {
@@ -9,7 +12,22 @@ app-champion-card {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    align-items: stretch;
     align-content: space-between;
     gap: .5rem;
+    margin: 1rem;
+}
+
+.search_area {
+    padding: variables.$default-padding;
+    background-color: variables.$background-color;
+    display: flex;
+    align-items: center;
+
+    .input_box {
+        font-size: 1.2rem;
+        text-align: center;
+        width: 50%;
+        margin: auto;
+    }
 }

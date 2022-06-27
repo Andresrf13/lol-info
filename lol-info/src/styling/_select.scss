@@ -1,0 +1,5 @@
+@use 'variables';
+
+mat-select-value {
+    color: variables.$main-color;
+}

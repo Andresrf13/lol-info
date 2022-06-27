@@ -1,0 +1,5 @@
+@use '../../styling/variables';
+
+mat-select {
+    border-radius: variables.$border-radius;
+}

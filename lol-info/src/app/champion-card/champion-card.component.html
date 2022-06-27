@@ -1,4 +1,4 @@
-<mat-card class="example-card">
+<mat-card class="champion-card">
     <mat-card-header>
         <div mat-card-avatar class="example-header-image"></div>
         <mat-card-title>{{champion.name}}</mat-card-title>
@@ -11,6 +11,6 @@
         </p>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-button [routerLink]="['/champion', champion.id]" >show more...</button>
+        <button mat-button class="show_more" [routerLink]="['/champion', champion.id]" >show more...</button>
     </mat-card-actions>
 </mat-card>

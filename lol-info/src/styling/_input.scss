@@ -1,0 +1,16 @@
+@use '_variables';
+
+.input_text {
+    border: none;
+    outline: none;
+    background-color: variables.$main-color;
+    padding: 0;
+    margin: 0;
+    border: 1px solid variables.$placeholder-color;
+    font-weight: 300;
+}
+
+.input_text::placeholder {
+    color: variables.$placeholder-color;
+    font-weight: lighter;
+}
