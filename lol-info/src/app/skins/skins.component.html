@@ -1,10 +1,15 @@
-<div class="container">
-    <mat-card class="example-card" *ngFor="let skin of skins" >
-        <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>{{skin.name}}</mat-card-title>
-            <mat-card-subtitle>{{_champion.name}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{getURl(skin.num)}}" alt="Photo of a Shiba Inu">
-    </mat-card>
+<div class="skin_page">
+    <div class="container">
+        <div class="skin" *ngFor="let skin of skins" (click)="selectSkin(skin)" >
+            <h5 class="title">{{skin.name}}</h5>
+            <img src="{{getURl(skin.num)}}" alt="{{_champion.name}}" />
+        </div>
+    </div>
+
+    <div class="show_skin" *ngIf="selectedSkin">
+        <h2 class="title">{{selectedSkin.name}}</h2>
+        <div  class="skin">
+            <img src="{{getURl(selectedSkin.num)}}" alt="{{_champion.name}}" />
+        </div>
+    </div>
 </div>
