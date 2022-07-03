@@ -1,24 +1,18 @@
 <div class="container">
-    <mat-card class="example-card">
-        <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Ally Tips</mat-card-title>
-            <mat-card-content>
-                <ul>
-                    <li *ngFor="let tip of champion.allyTips" > {{tip}} </li>
-                </ul>
-            </mat-card-content>
-        </mat-card-header>
-    </mat-card>
-    <mat-card class="example-card">
-        <mat-card-header>
-            <div mat-card-avatar class="example-header-image"></div>
-            <mat-card-title>Enemy Tips</mat-card-title>
-            <mat-card-content>
-                <ul>
-                    <li *ngFor="let tip of champion.enemyTips"> {{tip}} </li>
-                </ul>
-            </mat-card-content>
-        </mat-card-header>
-    </mat-card>
+    <div class="ally_tips_section">
+        <div class="title">{{'ally_Tips' | translate }}</div>
+        <div class="content">
+            <ul>
+                <li *ngFor="let tip of champion.allyTips"> {{tip}} </li>
+            </ul>
+        </div>
+    </div>
+    <div class="enemy_tips_section">
+        <div class="title">{{'enemy_Tips' | translate }}</div>
+        <div class="content">
+            <ul>
+                <li *ngFor="let tip of champion.enemyTips"> {{tip}} </li>
+            </ul>
+        </div>
+    </div>
 </div>

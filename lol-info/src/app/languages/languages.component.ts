@@ -2,6 +2,7 @@ import { AfterContentInit, Component, ContentChild, OnInit } from '@angular/core
 import { LanguagesService } from '../services/languages.service';
 import { Language } from '../../models/language';
 import { MatSelect } from '@angular/material/select'
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class LanguagesComponent implements  OnInit {
 
   selected: any;
 
-  constructor(private languagesService: LanguagesService) { 
+  constructor(private languagesService: LanguagesService, private translateService: TranslateService) { 
     this.languagesService.itemsSubject.subscribe(data => {
       this.items = data;
       this.selected = this.languagesService.currentLanguage;
@@ -29,6 +30,9 @@ export class LanguagesComponent implements  OnInit {
   selectionChanged(event: any) {
     this.languagesService.currentLanguage = this.selected;
     sessionStorage.setItem('language', this.selected);
+    let translateLanguage = this.selected === 'en_US' ? 'en' : 'es';
+    sessionStorage.setItem('appLanguage', translateLanguage);
+    this.translateService.use(translateLanguage);
     window.location.reload();
   }
 

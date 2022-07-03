@@ -1,0 +1,16 @@
+@use '../../styling/_variables' as *;
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: left;
+    height: 100vh;
+    margin: 4vw;
+
+    .title {
+        margin-left: $default-content-margin;
+        margin-right: $default-content-margin;
+        font-size: $font-title-size;
+    }
+}

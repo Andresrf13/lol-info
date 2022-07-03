@@ -24,10 +24,23 @@ mat-card {
     .show_more {
         background: variables.$emphasis-color;
     }
+
+        .mat-card-actions {
+            position: absolute;
+            bottom: 15px;
+        }
 }
 
 mat-card:hover {
-   transform: scale(1.05);
+   img {
+        transform: scale(0.95);
+        transition-duration: 1s;
+    }
+
+    .show_more {
+        background: variables.$contrast-color;
+    }
+
 }
 
 mat-card-content {

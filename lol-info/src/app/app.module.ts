@@ -8,7 +8,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LanguagesComponent } from './languages/languages.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { ChampionCardComponent } from './champion-card/champion-card.component';
 import { MatCardModule } from '@angular/material/card';
@@ -18,6 +18,8 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { LoreComponent } from './lore/lore.component';
 import { SkinsComponent } from './skins/skins.component';
 import { TipsComponent } from './tips/tips.component';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,13 @@ import { TipsComponent } from './tips/tips.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: translateFactory,
+        deps: [HttpClient]
+      }
+    }),
     MatMenuModule,
     MatSelectModule,
     MatButtonModule,
@@ -46,3 +55,8 @@ import { TipsComponent } from './tips/tips.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+export function translateFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
