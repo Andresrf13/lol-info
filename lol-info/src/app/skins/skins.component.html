@@ -2,7 +2,9 @@
     <div class="container">
         <div class="skin" *ngFor="let skin of skins" (click)="selectSkin(skin)" >
             <h5 class="title">{{skin.name}}</h5>
-            <img src="{{getURl(skin.num)}}" alt="{{_champion.name}}" />
+            <div class="skin_img">
+                <img src="{{getURl(skin.num)}}" alt="{{_champion.name}}" />
+            </div>
         </div>
     </div>
 

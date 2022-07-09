@@ -1,5 +1,6 @@
 <div class="container">
     <header>
+        <mat-icon (pointerup)="goHome()" class="home_icon" >home</mat-icon>
         <h1 (pointerup)="goHome()" class="title">{{'app_name' | translate }}</h1>
         <app-navbar class="nav"></app-navbar>
     </header>

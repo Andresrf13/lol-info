@@ -6,12 +6,12 @@
             display: flex;
             flex-direction: row;
             flex-wrap: nowrap;
-            justify-content: flex-start;
-            align-items: stretch;
+            justify-content: center;
+            align-items: center;
             align-content: center;
             gap: .5rem;
             width: calc(100vw - 2rem);
-            height: 20%;
+            // height: 20%;
             min-height: 150px;
             overflow-x: auto;
             margin-left: 1rem;
@@ -20,9 +20,10 @@
     
             .skin {
                 width: 20%;
+                max-width: 250px;
                 min-width: 100px;
                 height: calc(100% - 0.8rem);
-                padding-bottom: 0.2rem;
+                padding-bottom: 0.1rem;
                 padding-top: 0.2rem;
                 box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
                     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
@@ -33,17 +34,21 @@
                 .title {
                     max-width: 100%;
                     height: 20%;
-                    text-overflow: ellipsis;
+                    white-space: nowrap;
                     text-align: center;
                     vertical-align: middle;
-                    padding: 0;
+                    padding: 0.1rem;
+                    overflow: hidden;
                     margin: 0;
                 }
     
                 img {
                     max-width: 100%;
                     height: 80%;
+                    margin: auto;
                 }
+
+                .img_skin{}
             }
         }
 

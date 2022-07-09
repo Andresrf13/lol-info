@@ -40,6 +40,10 @@
             align-self: center;
             @include margin_padding;
         }
+
+        .home_icon {
+            margin-left: 0.5rem;
+        }
     }
     
     article {
@@ -52,8 +56,8 @@
         flex-grow: 1;
     }    
     .footer {
+        padding: 1rem;
         height: auto;
-        min-height: 6vw;
         width: 100%;
         background: $background-color;
         color: $main-color;

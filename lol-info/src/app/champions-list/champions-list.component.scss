@@ -24,34 +24,35 @@ app-champion-card {
     margin: auto;
     padding: 1rem 1rem 1rem 1rem;
 
-    .input_box {
-        border-color: $emphasis-color;
-        border-top: 1px solid;
-        border-left: 1px solid;
-        border-right: none;
-        border-bottom: 1px solid;
-        font-size: $font-body-size;
+    .input_search {
+        border: 1px solid $emphasis-color;
+        background: $main-color;
         color: $text-color;
+        font-size: $font-body-size;
         max-width: 400px;
         min-width: 200px;
         width: 50%;
-        margin: auto;
-        border-radius: $border-radius;
-        line-height: $line-height;
-        padding-left: $input-padding;
+
+        .input_box {
+            -webkit-appearance: none;
+            border: none;
+            width: calc(100% - 20px);
+            margin: 0;
+            padding-left: $input-padding;
+            vertical-align: middle;
+        }
+
+        mat-icon {
+            @include clearObject;
+            display: inline-block;
+            width: 20px;
+            height: auto;
+            color: inherit;
+            vertical-align: middle;
+            right: 0;
+        }
     }
 
-    mat-icon {
-        border-color: $emphasis-color;
-        height: $font-body-size;
-        border-top: 1px solid;
-        border-left: none;
-        border-right: 1px solid;
-        border-bottom: 1px solid;
-        font-size: $font-body-size;
-        color: $text-color;
-        background: $main-color;
-    }
 
     .input_box::placeholder {
         color: $placeholder-color;
