@@ -1,18 +1,17 @@
-@use '../../styling/variables';
+@use '../../styling/variables' as *;
 
 mat-card.champion-card {
     box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
         rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
         rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-    background-color: variables.$background-color;
-    color: variables.$main-color;
+    background: $background-color;
+    color: $main-color;
         
 
         mat-card-header {
-            color: variables.$contrast-color;
-
+            color: $main-color;
             mat-card-subtitle {
-                color: variables.$emphasis-color;
+                color: $main-color;
             }
         }
 }
@@ -22,7 +21,7 @@ mat-card {
     height: calc(100% - 40px);
 
     .show_more {
-        background: variables.$emphasis-color;
+        background: $emphasis-color;
     }
 
         .mat-card-actions {
@@ -38,7 +37,8 @@ mat-card:hover {
     }
 
     .show_more {
-        background: variables.$contrast-color;
+        background: $contrast-color;
+        color: $emphasis-color;
     }
 
 }

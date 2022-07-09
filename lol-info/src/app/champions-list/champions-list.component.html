@@ -1,5 +1,5 @@
 <div class="search_area">
-        <input matInput class="input_box input_text" #searchInput type="text" (input)="doSearch(searchInput.value)" [attr.placeholder]="'search_place_holder' | translate">
+    <input matInput class="input_box input_text" #searchInput type="text" (input)="doSearch(searchInput.value)" [attr.placeholder]="'search_place_holder' | translate">
 </div>
 <div class="display">
     <app-champion-card *ngFor="let item of champions" [champion]="item"></app-champion-card>

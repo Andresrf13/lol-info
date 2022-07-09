@@ -1,13 +1,24 @@
 $main-color: #fff;
-$background-color: #1A2238;
-$medium-color: #9DAAF2;
-$emphasis-color: #FF6A3D;
-$contrast-color: #F4DB7D;
-$placeholder-color: #095484;
+$background-color: linear-gradient(27deg, rgba(40, 75, 99, 1) 0%, rgba(16, 100, 157, 1) 100%);
+$emphasis-color: #353535;
+$text-color: $emphasis-color;
+$contrast-color: #D9D9D9;
+$placeholder-color: #D9D9D9;
+$main-background:linear-gradient(137deg, rgba(255, 255, 255, 1) 0%, rgba(217, 217, 217, 1) 100%);
 
-$default-padding: 10px;
+$default-padding: 0.5rem;
 $default-margin: 0px;
 $default-content-margin: 4vw;
 $border-radius: 2px;
 
-$font-title-size: 1.2rem;
+$font-title-size: 1.5rem;
+$font-subtitle-size: 1.3rem;
+$font-body-size: 1rem;
+$line-height: 1.6;
+$input-padding: 0.5rem;
+
+@mixin clearObject {
+    padding: 0px;
+    margin: 0px;
+    font-size: 16px;
+}

@@ -1,52 +1,62 @@
-@use '../styling/variables';
+@use '../styling/variables' as *;
 
 @mixin margin_padding{
-    margin: variables.$default-margin;
-    padding: variables.$default-padding;
+    margin: $default-margin;
+    padding: $default-padding;
 }
 
-header {
-    height: 5vh;
+.container {
     display: flex;
-    align-items: center;
-    width: 100%;
-    background-color: variables.$background-color;
-    color: variables.$main-color;
-
-    .logo {
-        width: 100px;
-        height: 100px;
-        background-color: #fff;
-        border-radius: 50%;
-        margin-right: 20px;
+    flex-direction: column;
+    min-height: 100%;
+    
+    header {
+        height: 3vh;
+        min-height: 40px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background: $background-color;
+        color: $main-color;
+    
+        .logo {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+    
+        .title {
+            width: 20%;
+            align-self: center;
+            cursor: pointer;
+            @include margin_padding;
+            
+        }
+    
+        .nav {
+            width: 80%;
+            align-self: center;
+            @include margin_padding;
+        }
     }
-
-    .title {
-        width: 20%;
-        align-self: center;
-        cursor: pointer;
-        @include margin_padding;
-        
+    
+    article {
+        background-image: var(--background);
+        width: 100%;
+        overflow: auto;
     }
-
-    .nav {
-        width: 80%;
-        align-self: center;
-        @include margin_padding;
+    
+    .adjust {
+        flex-grow: 1;
+    }    
+    .footer {
+        height: auto;
+        min-height: 6vw;
+        width: 100%;
+        background: $background-color;
+        color: $main-color;
     }
-}
-
-article {
-    background-image: var(--background);
-    height: 90vh;
-    width: 100vw;
-    overflow: auto;
-}
-
-footer {
-    height: 5vh;
-    width: 100vw;
-    background-color: variables.$background-color;
-    color: variables.$main-color;
 }
 

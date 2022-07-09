@@ -1,8 +1,9 @@
 {
+    "app_name": "LoLInfo.Net",
     "search_place_holder": "Search champion",
     "tab_General": "General",
     "tab_Skins": "Skins",
     "tab_Tips": "Tips",
-        "ally_Tips": "Ally tips",
-        "enemy_Tips": "Enemy tips"
+    "ally_Tips": "Ally tips",
+    "enemy_Tips": "Enemy tips"
 }

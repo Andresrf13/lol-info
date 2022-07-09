@@ -20,6 +20,8 @@ import { SkinsComponent } from './skins/skins.component';
 import { TipsComponent } from './tips/tips.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { FooterComponent } from './footer/footer.component';
+import { MatIconModule } from '@angular/material/icon'
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     ChampionInformationComponent,
     LoreComponent,
     SkinsComponent,
-    TipsComponent
+    TipsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -45,6 +48,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
         deps: [HttpClient]
       }
     }),
+    MatIconModule,
     MatMenuModule,
     MatSelectModule,
     MatButtonModule,

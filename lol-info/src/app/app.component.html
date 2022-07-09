@@ -1,10 +1,13 @@
-<header>
-    <h1 (pointerup)="goHome()" class="title">{{title}}</h1>
-    <app-navbar class="nav"></app-navbar>
-</header>
-<article>
-        <router-outlet></router-outlet>
-</article>
-<footer>
-    
-</footer>
+<div class="container">
+    <header>
+        <h1 (pointerup)="goHome()" class="title">{{'app_name' | translate }}</h1>
+        <app-navbar class="nav"></app-navbar>
+    </header>
+    <article>
+            <router-outlet></router-outlet>
+    </article>
+    <div class="adjust"></div>
+    <div class="footer">
+        <app-footer></app-footer>
+    </div>
+</div>

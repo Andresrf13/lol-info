@@ -1,4 +1,4 @@
-@use '../../styling/variables';
+@use '../../styling/variables' as *;
 
 .skin_page {
      height: 100%;
@@ -12,24 +12,26 @@
             gap: .5rem;
             width: calc(100vw - 2rem);
             height: 20%;
+            min-height: 150px;
             overflow-x: auto;
             margin-left: 1rem;
             margin-right: 1rem;
             cursor: pointer;
     
             .skin {
-                width: 15vw;
+                width: 20%;
+                min-width: 100px;
                 height: calc(100% - 0.8rem);
                 padding-bottom: 0.2rem;
                 padding-top: 0.2rem;
                 box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
                     rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
                     rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-                background-color: variables.$background-color;
-                color: variables.$main-color;
+                background: $background-color;
+                color: $main-color;
     
                 .title {
-                    max-width: 15vw;
+                    max-width: 100%;
                     height: 20%;
                     text-overflow: ellipsis;
                     text-align: center;
@@ -39,7 +41,7 @@
                 }
     
                 img {
-                    max-width: 15vw;
+                    max-width: 100%;
                     height: 80%;
                 }
             }

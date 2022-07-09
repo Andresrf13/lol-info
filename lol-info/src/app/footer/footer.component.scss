@@ -1,0 +1,35 @@
+@use '../../styling/variables' as *;
+
+.container {
+    width: 97%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .links {
+        width: auto;
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    .contact {
+        font-size: 0.7rem;
+
+        a {
+            color: $main-color;
+            text-decoration: none;
+            border-bottom: 1px solid $main-color;
+            line-height:$line-height;
+        }
+    }
+
+    .page_name {
+        font-size: $font-title-size;
+        align-self: center;
+    }
+}

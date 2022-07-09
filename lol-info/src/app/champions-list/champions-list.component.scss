@@ -1,4 +1,4 @@
-@use '../../styling/variables';
+@use '../../styling/variables' as *;
 @use '../../styling/input';
 @use '../../styling/select';
 
@@ -11,23 +11,49 @@ app-champion-card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: space-between;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     gap: .5rem;
     margin: 1rem;
 }
 
 .search_area {
-    padding: variables.$default-padding;
-    background-color: variables.$background-color;
-    display: flex;
-    align-items: center;
+    background: $background-color;
+    display: block;
+    margin: auto;
+    padding: 1rem 1rem 1rem 1rem;
 
     .input_box {
-        font-size: 1.2rem;
-        text-align: center;
+        border-color: $emphasis-color;
+        border-top: 1px solid;
+        border-left: 1px solid;
+        border-right: none;
+        border-bottom: 1px solid;
+        font-size: $font-body-size;
+        color: $text-color;
+        max-width: 400px;
+        min-width: 200px;
         width: 50%;
         margin: auto;
+        border-radius: $border-radius;
+        line-height: $line-height;
+        padding-left: $input-padding;
+    }
+
+    mat-icon {
+        border-color: $emphasis-color;
+        height: $font-body-size;
+        border-top: 1px solid;
+        border-left: none;
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        font-size: $font-body-size;
+        color: $text-color;
+        background: $main-color;
+    }
+
+    .input_box::placeholder {
+        color: $placeholder-color;
     }
 }
