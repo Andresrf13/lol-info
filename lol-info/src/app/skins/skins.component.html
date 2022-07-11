@@ -1,16 +1,20 @@
 <div class="skin_page">
-    <div class="container">
-        <div class="skin" *ngFor="let skin of skins" (click)="selectSkin(skin)" >
-            <h5 class="title">{{skin.name}}</h5>
-            <div class="skin_img">
-                <img src="{{getURl(skin.num)}}" alt="{{_champion.name}}" />
+    <div class="scroll_container">
+        <div #container class="container" (mouseover)="showScroll($event)" (mouseleave)="hideScroll($event)" >
+            <div #leftDiv class="scroll left hide" (mouseover)="moveLeft($event)" (mouseleave)="clearScroll()" ><mat-icon>keyboard_arrow_left</mat-icon></div>
+            <div #rightDiv class="scroll right hide" (mouseover)="moveRight($event)"  (mouseleave)="clearScroll()" ><mat-icon>keyboard_arrow_right</mat-icon></div>
+            <div class="skin" *ngFor="let skin of skins" (click)="selectSkin(skin)">
+                <h5 class="title">{{skin.name}}</h5>
+                <div class="skin_img">
+                    <img src="{{getURl(skin.num)}}" alt="{{_champion.name}}" />
+                </div>
             </div>
         </div>
     </div>
 
     <div class="show_skin" *ngIf="selectedSkin">
         <h2 class="title">{{selectedSkin.name}}</h2>
-        <div  class="skin">
+        <div class="skin">
             <img src="{{getURl(selectedSkin.num)}}" alt="{{_champion.name}}" />
         </div>
     </div>
