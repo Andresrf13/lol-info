@@ -1,4 +1,9 @@
+import { imageChampion } from "./models/image-champion";
+
 export class Paths {
+    static getLoadingImage(championId: string) {
+        return `http://ddragon.leagueoflegends.com/cdn/img/champion/loading/${championId}_0.jpg`;
+    }
     
     /**
      * It takes a championId and a number, and returns a string that is the url of the champion's

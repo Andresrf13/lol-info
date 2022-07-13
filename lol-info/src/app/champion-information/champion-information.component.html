@@ -1,4 +1,4 @@
-<mat-tab-group>
+<mat-tab-group [(selectedIndex)]="selectedIndex" >
     <mat-tab label="{{'tab_General' | translate }}"> <app-lore [champion]="champion"></app-lore> </mat-tab>
     <mat-tab label="{{'tab_Skins' | translate }}"><app-skins [champion]="champion" ></app-skins></mat-tab>
     <mat-tab label="{{'tab_Tips' | translate }}"> <app-tips [champion]="champion"></app-tips> </mat-tab>

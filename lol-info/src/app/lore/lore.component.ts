@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Champion } from 'src/models/Champion';
+import { Paths } from 'src/Paths';
 
 @Component({
   selector: 'app-lore',
@@ -16,6 +17,6 @@ export class LoreComponent implements OnInit {
   }
 
   get urlImage() {
-    return `http://ddragon.leagueoflegends.com/cdn/img/champion/splash/${this.champion.id}_0.jpg`;
+    return Paths.getLoadingImage(this.champion.id);
   }
 }

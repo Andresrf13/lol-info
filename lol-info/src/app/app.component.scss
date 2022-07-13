@@ -1,15 +1,21 @@
 @use '../styling/variables' as *;
 
-@mixin margin_padding{
+@mixin margin_padding {
     margin: $default-margin;
     padding: $default-padding;
+}
+
+:host {
+    background: $main-background;
+    width: 100%;
+    height: 100%;
 }
 
 .container {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    
+
     header {
         height: 3vh;
         min-height: 40px;
@@ -18,7 +24,7 @@
         width: 100%;
         background: $background-color;
         color: $main-color;
-    
+
         .logo {
             width: 100px;
             height: 100px;
@@ -26,15 +32,15 @@
             border-radius: 50%;
             margin-right: 20px;
         }
-    
+
         .title {
             width: 20%;
             align-self: center;
             cursor: pointer;
             @include margin_padding;
-            
+
         }
-    
+
         .nav {
             width: 80%;
             align-self: center;
@@ -45,16 +51,17 @@
             margin-left: 0.5rem;
         }
     }
-    
+
     article {
         background-image: var(--background);
         width: 100%;
         overflow: auto;
     }
-    
+
     .adjust {
         flex-grow: 1;
-    }    
+    }
+
     .footer {
         padding: 1rem;
         height: auto;
@@ -63,4 +70,3 @@
         color: $main-color;
     }
 }
-
