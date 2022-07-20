@@ -67,3 +67,8 @@ html {
 body {
   font-size: 16px;
 }
+
+.no_interaction {
+  cursor: default;
+  user-select: none;
+}
